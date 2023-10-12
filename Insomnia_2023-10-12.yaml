@@ -1,0 +1,164 @@
+_type: export
+__export_format: 4
+__export_date: 2023-10-12T18:40:36.196Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_823aa14949f2442e8dc9be85aeea0b37
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697135879622
+    created: 1697135879622
+    url: http://localhost:4000/users
+    name: create user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fullName": "Test Test",
+        	"email": "test@test.com",
+        	"bio": "Bio Test Test",
+        	"password": "np123!"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697133001854
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_87f58665aee143e0945b5b78e3a1f00e
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135879617
+    created: 1697135879617
+    name: nest_mongodb
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1000000000
+    _type: request_group
+  - _id: wrk_036e6e7b6b5b4301b00531871f079eb7
+    parentId: null
+    modified: 1697135858031
+    created: 1697135858031
+    name: nestjs_mongodb
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_957f0c603ad541c7912a7634fd7cce78
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697135879618
+    created: 1697135879618
+    url: http://localhost:4000/users/list
+    name: list users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1697132924861
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ce16cc08f4b44f3acffa59c31035bb9
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697135879620
+    created: 1697135879620
+    url: http://localhost:4000/users/652834fb935bca1a9fdd3ca4
+    name: get user by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1688634652720.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a787d7cffad64d71b3c0a7b493382c3a
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697135879626
+    created: 1697135879626
+    url: http://localhost:4000/users/652831ecf048ed6bc29db1aa
+    name: update user by id
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684385516650.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3f0fc4eaa96740f7a1277b9dba4eb196
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697135879629
+    created: 1697135879629
+    url: http://localhost:4000/users/652831ecf048ed6bc29db1aa
+    name: delete user by id
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1682260948615.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ea80f776c167ca592648ffa357ab0c9c866bda5b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858036
+    created: 1697135858036
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1697135858036
+    _type: environment
+  - _id: jar_ea80f776c167ca592648ffa357ab0c9c866bda5b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858038
+    created: 1697135858038
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_1e203851097948518f4c8944f8fca83b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858032
+    created: 1697135858032
+    fileName: nestjs_mongodb
+    contents: ""
+    contentType: yaml
+    _type: api_spec
