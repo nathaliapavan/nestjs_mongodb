@@ -16,7 +16,7 @@ export class MongoDBService {
         dbName: process.env.MONGO_DATABASE_NAME,
         auth: {
           username: process.env.MONGO_INITDB_ROOT_USERNAME,
-          password: process.env.MONGO_INITDB_ROOT_PASSWORD,
+          password: 'process.env.MONGO_INITDB_ROOT_PASSWORD',
         },
       });
       console.log('Connection to MongoDB created successfully!');
