@@ -3,7 +3,7 @@ import { User, UserSchema } from './model/user.schema';
 import { Model } from 'mongoose';
 import { CreateUserInput, UpdateUserInput } from './model/user.input';
 import { UserPayload } from './model/user.payload';
-import { MongoDBService } from './mongodb.service';
+import { MongoDBService } from '../../infra/database/mongodb/mongodb.service';
 
 @Injectable()
 export class UserService {
