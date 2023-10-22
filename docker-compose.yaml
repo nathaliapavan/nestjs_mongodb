@@ -1,6 +1,5 @@
 version: '3.3'
 services:
-  # app service for your backend
   app:
     container_name: backend
     build:
@@ -8,17 +7,17 @@ services:
       dockerfile: Dockerfile
     env_file:
       - .env
-    command: ["yarn", "run", "start:dev"]
+    command: ['yarn', 'run', 'start:dev']
     ports:
       - '4000:4000'
     networks:
       - your-network
     depends_on:
       - database
+      - redis
     volumes:
       - .:/app
 
-  # start the mongodb service as container
   database:
     image: mongo
     container_name: mongodb
@@ -32,8 +31,21 @@ services:
     volumes:
       - mongodb-data:/data/db
 
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - '6379:6379'
+    networks:
+      - your-network
+    volumes:
+      - redis-data:/data
+    command: >
+      --requirepass ${REDIS_PASSWORD}
+
 networks:
   your-network:
 
 volumes:
   mongodb-data:
+  redis-data:
