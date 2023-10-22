@@ -1,0 +1,334 @@
+_type: export
+__export_format: 4
+__export_date: 2023-10-22T19:32:38.045Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_f8a6e9324b6c4f5683345877981fafb7
+    parentId: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    modified: 1697987457391
+    created: 1697987317020
+    url: http://localhost:4000/posts
+    name: create post
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "2",
+        	"author": "Nathalia Pavan",
+        	"title": "post title",
+        	"description": "post description"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697987303831.2812
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697987304084
+    created: 1697987304084
+    name: posts
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1697987304084
+    _type: request_group
+  - _id: fld_87f58665aee143e0945b5b78e3a1f00e
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135879617
+    created: 1697135879617
+    name: nest_mongodb
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1000000000
+    _type: request_group
+  - _id: wrk_036e6e7b6b5b4301b00531871f079eb7
+    parentId: null
+    modified: 1697135858031
+    created: 1697135858031
+    name: nestjs_mongodb
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_4d78d16e97234e2dad40fc7f6768a915
+    parentId: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    modified: 1697987469232
+    created: 1697987350817
+    url: http://localhost:4000/posts/list
+    name: list posts
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697560152842.6406
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fb9b0a59b1a44d1db6a54f63fe3d295d
+    parentId: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    modified: 1697987479125
+    created: 1697987375755
+    url: http://localhost:4000/posts/2
+    name: get post by id
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697346577348.3203
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_22af968f824e444e8b4f10c829d5e0cb
+    parentId: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    modified: 1697987499943
+    created: 1697987397021
+    url: http://localhost:4000/posts/2
+    name: update post by id
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"id": "2",
+        		"author": "Nathalia Pavan 2",
+        		"title": "post title 2",
+        		"description": "post description 2"
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697239789601.1602
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8737bdbe7bd6495a881098cea427a28e
+    parentId: fld_dba4a5a98b514d0b9830ab6ae694a2a9
+    modified: 1697987414429
+    created: 1697987411163
+    url: http://localhost:4000/posts/1
+    name: delete post by id
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697186395727.58
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_823aa14949f2442e8dc9be85aeea0b37
+    parentId: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    modified: 1697987291344
+    created: 1697135879622
+    url: http://localhost:4000/users
+    name: create user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fullName": "Nathalia Pavan",
+        	"email": "Nathalia Pavannanahpavan@gmail.com",
+        	"bio": "Bio Nathalia Pavan",
+        	"password": "np123!"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697133001854
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    parentId: fld_87f58665aee143e0945b5b78e3a1f00e
+    modified: 1697987287910
+    created: 1697987287910
+    name: users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1697987287910
+    _type: request_group
+  - _id: req_957f0c603ad541c7912a7634fd7cce78
+    parentId: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    modified: 1697987292776
+    created: 1697135879618
+    url: http://localhost:4000/users/list
+    name: list users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1697133001804
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ce16cc08f4b44f3acffa59c31035bb9
+    parentId: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    modified: 1698002267478
+    created: 1697135879620
+    url: http://localhost:4000/users/653575502b34a04d5ae91649
+    name: get user by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1697133001754
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a787d7cffad64d71b3c0a7b493382c3a
+    parentId: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    modified: 1698002302639
+    created: 1697135879626
+    url: http://localhost:4000/users/653567c4e05d09bef1d48444
+    name: update user by id
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fullName": "Nathalia Pavan 3",
+        	"email": "Nathalia Pavannanahpavan@gmail.com",
+        	"bio": "Bio Nathalia Pavan",
+        	"password": "np123!",
+        	"createdAt": "2023-10-22T18:19:48.692Z",
+        	"updatedAt": "2023-10-22T18:19:48.692Z",
+        	"__v": 0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1697133001704
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3f0fc4eaa96740f7a1277b9dba4eb196
+    parentId: fld_78f6ca0947734bdcb7b19d5c6e00c2f2
+    modified: 1697987296265
+    created: 1697135879629
+    url: http://localhost:4000/users/652831ecf048ed6bc29db1aa
+    name: delete user by id
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1697133001654
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ea80f776c167ca592648ffa357ab0c9c866bda5b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858036
+    created: 1697135858036
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1697135858036
+    _type: environment
+  - _id: jar_ea80f776c167ca592648ffa357ab0c9c866bda5b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858038
+    created: 1697135858038
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_1e203851097948518f4c8944f8fca83b
+    parentId: wrk_036e6e7b6b5b4301b00531871f079eb7
+    modified: 1697135858032
+    created: 1697135858032
+    fileName: nestjs_mongodb
+    contents: ""
+    contentType: yaml
+    _type: api_spec
