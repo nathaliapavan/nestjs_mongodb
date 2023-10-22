@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpException,
   Param,
   Post,
   Put,
@@ -19,26 +20,46 @@ export class UserController {
 
   @Post()
   createUser(@Body() body: CreateUserInput) {
-    return this.userService.createUser(body);
+    try {
+      return this.userService.createUser(body);
+    } catch (error) {
+      new HttpException(error.message, error.statusCode);
+    }
   }
 
   @Get('/list')
   listUser() {
-    return this.userService.listUser();
+    try {
+      return this.userService.listUser();
+    } catch (error) {
+      new HttpException(error.message, error.statusCode);
+    }
   }
 
   @Get('/:id')
   findUser(@Param('id') id: string) {
-    return this.userService.findUser(id);
+    try {
+      return this.userService.findUser(id);
+    } catch (error) {
+      new HttpException(error.message, error.statusCode);
+    }
   }
 
   @Put('/:id')
   updateUser(@Param('id') id: string, @Body() body: CreateUserInput) {
-    return this.userService.updateUser(id, body);
+    try {
+      return this.userService.updateUser(id, body);
+    } catch (error) {
+      new HttpException(error.message, error.statusCode);
+    }
   }
 
   @Delete('/:id')
   deleteUser(@Param('id') id: string) {
-    return this.userService.deleteUser(id);
+    try {
+      return this.userService.deleteUser(id);
+    } catch (error) {
+      new HttpException(error.message, error.statusCode);
+    }
   }
 }

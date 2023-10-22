@@ -1,13 +1,18 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { User } from './model/user.schema';
+import { User, UserSchema } from './model/user.schema';
 import { Model } from 'mongoose';
 import { CreateUserInput, UpdateUserInput } from './model/user.input';
 import { UserPayload } from './model/user.payload';
+import { MongoDBService } from './mongodb.service';
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel(User.name) private userModel: Model<User>) {}
+  private userModel: Model<User>;
+  constructor(private readonly mongoDBService: MongoDBService) {
+    this.userModel = this.mongoDBService
+      .getMongooseInstance()
+      .model(User.name, UserSchema);
+  }
 
   async createUser(body: CreateUserInput): Promise<UserPayload> {
     const createdUser = new this.userModel(body);
