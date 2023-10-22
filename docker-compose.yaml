@@ -15,6 +15,8 @@ services:
       - your-network
     depends_on:
       - database
+    volumes:
+      - .:/app
 
   # start the mongodb service as container
   database:
@@ -27,6 +29,11 @@ services:
       - .env
     networks:
       - your-network
+    volumes:
+      - mongodb-data:/data/db
 
 networks:
   your-network:
+
+volumes:
+  mongodb-data:
